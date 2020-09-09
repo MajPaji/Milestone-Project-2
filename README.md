@@ -1,39 +1,29 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Milestone project 2 
+## NASA T-Shirt
 
-Welcome USER_NAME,
+NASA (National Aeronautics and Space Administration) is a well-known U.S. space program agency, which run very interesting projects including Apollo Moon landing missions, 
+Skylab space station, MARS exploration and many other interesting projects. 
+One of the important aims of the NASA is always make their achievements available for the public and make it interesting for new generation and young people. 
+So, what could be better than having a T-shirt which has NASA picture and some explanation related to it?
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+The aim of this website is to make it possible that you can search and choose the picture that you would like from NASA public shared 
+images and put it on your size fitting T-shirt.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## UX
 
-`python3 -m http.server`
+This website could increase people knowledge about NASA organizations and their projects. 
+This website could be useful for everybody, but it would be especially good for young generations. 
+Or else, it could be good for clothing-retail companies to sell new t-shirt designs. 
+In this business model, people design their own t-shirt which could be interesting for a lot of people.
 
-A blue button should appear to click: *Make Public*,
+This website is consisting of two main sections. In the first section, 
+it is possible to search in NASA image database with different keywords, which is free for public use, to find desired image. 
+In the next section, it is possible to choose size and color of the t-shirt and order it via e-mail system.
 
-Another blue button should appear to click: *Open Browser*.
+Here some user stories:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* As a communication manager in NASA, I am very happy with this website because it shows to people and especially young teenagers about many 
+interesting projects that we are running at NASA.
 
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+* As a person which do a lot of cloth online shopping, this website give the opportunity to design my own t-shirt.
