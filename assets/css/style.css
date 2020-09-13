@@ -64,16 +64,13 @@ body{
     width: 200px;
 } */
 
-.sky-section{ 
-  
-  background: url("../images/background-sky.jpg");
+.sky-section{
+  background: url("../images/background-sky.jpg") center center fixed;
   background-repeat: no-repeat;
-  background-size: contain;
-/*   -moz-background-size: cover;
+  background-size: cover;
+  -moz-background-size: cover;
   -webkit-background-size: cover;
-  -o-background-size: cover; */
-  background-position: 50% 50%;
-  position:  ;
+  -o-background-size: cover;
 }
 
 .data-image-article img {
