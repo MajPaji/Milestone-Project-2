@@ -40,21 +40,26 @@ xhr.onreadystatechange = function(){
         dataImage.forEach(function(item){
             imageFiles.push(`
             <div class="data-image-article col-10 col-sm-3">
-                        <img src="${item.links[0].href}">
+                <img src="${item.links[0].href}">            
                         <div class= "data-image-text">
-                        <h4 class="data-image-title">${item.data[0].title}</h4>
-                        <div class="data-image-description">${item.data[0].description}</div>
+                            <h4 class="data-image-title">${item.data[0].title}</h4>
+                            <div class="data-image-description">${item.data[0].description}
                         </div>
+                </div>
             </div>`)
         })
         
 
     }
  
-$(".data").html(`<div class="sky-section container-fluid"><div class="row justify-content-center">${imageFiles}</div><div>`.replace(/,/g, ""));
-//$(".data-image-text").hide();   
+$(".data").html(`
+            <div class="sky-section container-fluid">
+                    <div class="row justify-content-center">${imageFiles}</div>
+            <div>`.replace(/,/g, ""));
+$(".data-image-text").hide();
+$(".data-image-article img").on("click", function(){
+    $(this).siblings().slideToggle();
+})
 }
-
-
 }
 
