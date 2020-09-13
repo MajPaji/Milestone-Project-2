@@ -39,10 +39,10 @@ xhr.onreadystatechange = function(){
         console.log(typeof dataImage);
         dataImage.forEach(function(item){
             imageFiles.push(`
-            <div class="data-image-article justify-content-center col-10 col-sm-3">
+            <div class="data-image-article col-10 col-sm-3">
                         <img src="${item.links[0].href}">
                         <div class= "data-image-text">
-                        <div class="data-image-title">${item.data[0].title}</div>
+                        <h4 class="data-image-title">${item.data[0].title}</h4>
                         <div class="data-image-description">${item.data[0].description}</div>
                         </div>
             </div>`)
