@@ -2,6 +2,7 @@ function imageLoaderHTML(){
    $(".data").html(`
    <div id="load-image">
         <img src="assets/images/load-image.gif" alt="laoding ...">
+        <h2>Loading...</h2>
    </div>`)
 }
 

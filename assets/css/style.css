@@ -65,6 +65,7 @@ body{
 } */
 
 .sky-section{
+  min-height: 100vh;
   background: url("../images/background-sky.jpg") center center fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,9 +92,9 @@ body{
 
 #load-image{
     position: relative;
-    height: 50vh;
+    margin-top: 100px;
     text-align: center;
-    
+    color:#fafafa;
 
 }
 
