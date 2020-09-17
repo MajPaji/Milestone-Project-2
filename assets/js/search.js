@@ -1,3 +1,5 @@
+
+
 function imageLoaderHTML(){
    $(".data").html(`
    <div id="load-image">
@@ -46,21 +48,55 @@ xhr.onreadystatechange = function(){
                             <h4 class="data-image-title">${item.data[0].title}</h4>
                             <div class="data-image-description">${item.data[0].description}
                         </div>
+                        <button type="button" class="btn btn-primary mb-3 btn--make-shirt">Add to your T-shirt</button>
                 </div>
             </div>`)
-        })
-        
-
+        })     
     }
  
 $(".data").html(`
             <div class="sky-section container-fluid">
-                    <div class="row justify-content-center">${imageFiles}</div>
+            <div class="row justify-content-center">${imageFiles}</div>
             <div>`.replace(/,/g, ""));
 $(".data-image-text").hide();
 $(".data-image-article img").on("click", function(){
     $(this).siblings().slideToggle();
 })
+
+    
+var allTshirts = [];
+$(".btn--make-shirt").click(function(){
+     console.log("hello");    
+    var tShirtTitle = $(this).siblings("h4").html();
+    var tShirtImage = $(this).parent().prev().attr("src");
+    var newTshirts =   `<div class="col-10 col-sm-3 align-items-center selected-t-shirts-article"><div><img mx-auto my-auto d-block src="${tShirtImage}"></div></div>`;
+    allTshirts.push(newTshirts);
+    console.log(allTshirts);
+    $(".selected-t-shirts").html(allTshirts.join().replace(/,/g, ""))
+})
+
+
+
+
+
+
 }
+
+
+
+
 }
+
+$(document).ready(function(){
+$("#your-t-shirt").on("click", function(){
+    $("#search-box-data").toggle();
+    $("#search-results").toggle();
+});
+})
+
+
+
+
+
+
 

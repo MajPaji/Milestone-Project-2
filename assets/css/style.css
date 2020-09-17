@@ -127,3 +127,36 @@ body{
 }
 
 
+/* -------------------------------------------------------------------- selected t-shirts */
+
+.selected-t-shirts-article{
+    position: relative;
+    min-height: 500px;
+    margin: 50px 0;
+    text-align: center;
+      background: url("../images/t-shirt-frame-blue.png") center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        -moz-background-size: contain;
+        -webkit-background-size: contain;
+        -o-background-size: contain;
+        
+        
+}
+
+.selected-t-shirts-article > div{
+    
+display: block;
+margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    
+}
+
+.selected-t-shirts-article > div img{
+    
+  width: 40%;
+    
+}
