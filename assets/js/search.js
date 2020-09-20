@@ -69,11 +69,56 @@ $(".btn--make-shirt").click(function(){
      console.log("hello");    
     var tShirtTitle = $(this).siblings("h4").html();
     var tShirtImage = $(this).parent().prev().attr("src");
-    var newTshirts =   `<div class="col-10 col-sm-3 align-items-center selected-t-shirts-article"><div><img mx-auto my-auto d-block src="${tShirtImage}"></div></div>`;
+
+    var newTshirts = `
+    
+    <div class="carousel-item">
+    
+        <div class="t-shirt-background">
+        <img class="t-shirt-image mx-auto d-block"  src="${tShirtImage}" alt="${tShirtTitle}">
+        </div>
+        
+    </div>
+    
+    `  
+   
+    $("#your-t-shirt span").html(` (${allTshirts.length + 1})`);
+
+    allTshirts.push(newTshirts);
+    if (allTshirts.length === 1){
+        allTshirts[0]= allTshirts[0].replace("carousel-item", "carousel-item active");
+    }
+    
+    console.log(allTshirts);
+    
+
+    $(".selected-t-shirts").html(
+        `<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                ${allTshirts.join().replace(/,/g, "")}
+            </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        </div>        
+        `
+
+    )
+
+ 
+
+    /* var newTshirts =   `<div class="col-10 col-sm-3 align-items-center selected-t-shirts-article"><div><p>${tShirtTitle}</p><img mx-auto my-auto d-block src="${tShirtImage}"></div></div>`;
     allTshirts.push(newTshirts);
     console.log(allTshirts);
-    $(".selected-t-shirts").html(allTshirts.join().replace(/,/g, ""))
+    $(".selected-t-shirts").html(allTshirts.join().replace(/,/g, "")) */
 })
+
+
 
 
 
@@ -88,11 +133,23 @@ $(".btn--make-shirt").click(function(){
 }
 
 $(document).ready(function(){
-$("#your-t-shirt").on("click", function(){
-    $("#search-box-data").toggle();
-    $("#search-results").toggle();
+$("#search-page").on("click", function(){
+    $("#all-t-shirts").hide();
+    $("#search-results").show();
+    $("#search-box-data").show();
 });
+
+$("#your-t-shirt").on("click", function(){
+    $("#search-box-data").hide();
+    $("#search-results").hide();
+    $("#all-t-shirts").show();
+});
+
+
+
 })
+
+
 
 
 

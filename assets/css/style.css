@@ -5,14 +5,22 @@ body{
     background-color: rgb(0, 0, 0);
 }
 
+#resizable { width: 150px; height: 150px; padding: 0.5em; }
+  #resizable h3 { text-align: center; margin: 0; }
+
 /* -------------------------------------------------------------------- navigation */
 
 .navbar {
   font-family: "Exo", sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
   letter-spacing: 1px;
   padding: 28px;
+}
+
+.nav-item {
+    margin-left: 25px;
+    font-weight: 500;
 }
 
 .navbar-bg-color {
@@ -25,6 +33,10 @@ body{
   font-weight: 400;
   letter-spacing: 2px;
   margin: 0px;
+}
+
+#your-t-shirt span{
+    color: skyblue;
 }
 
 /* -------------------------------------------------------------------- search box */
@@ -115,6 +127,7 @@ body{
 }
 
 .data-image-description{
+  
   font-family: "Exo", sans-serif;
   color: #fafafa;
   font-size: 16px;
@@ -129,34 +142,75 @@ body{
 
 /* -------------------------------------------------------------------- selected t-shirts */
 
-.selected-t-shirts-article{
-    position: relative;
-    min-height: 500px;
-    margin: 50px 0;
+/* .t-shirt-frame{    
     text-align: center;
-      background: url("../images/t-shirt-frame-blue.png") center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        -moz-background-size: contain;
-        -webkit-background-size: contain;
-        -o-background-size: contain;
-        
-        
+} */
+
+
+/* .t-shirt-image{
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center center;
+    margin: 0 auto;
+    margin-top: 40%;
+    
+
+    
 }
 
-.selected-t-shirts-article > div{
-    
-display: block;
-margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.t-shirt-background{
+    width: 700px;
+    height: 700px;
+    display: inline-block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center center;
+
+} */
+
+.t-shirt-frame{
     
 }
 
-.selected-t-shirts-article > div img{
+.t-shirt-image{
+    width: 20%;
+    max-width: 150px;
+    height: auto;
+    top: 50%;
+        position: relative;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+
     
-  width: 40%;
     
+    
+
+    
+}
+
+.t-shirt-background{
+    height: 700px;
+    width: auto;
+    
+  background: url("../images/t-shirt-frame-blue.png") center center ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -moz-background-size: contain;
+  -webkit-background-size: contain;
+  -o-background-size: contain;
+  background-position: ;
+    position: ;
+   
 }
