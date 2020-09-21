@@ -18,6 +18,10 @@ body{
   padding: 28px;
 }
 
+.navbar-collapse{
+    display: contents;
+}
+
 .nav-item {
     margin-left: 25px;
     font-weight: 500;
@@ -35,7 +39,7 @@ body{
   margin: 0px;
 }
 
-#your-t-shirt span{
+#your-t-shirt span:last-child{
     color: skyblue;
 }
 

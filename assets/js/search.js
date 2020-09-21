@@ -95,7 +95,7 @@ $(".btn--make-shirt").click(function(){
     
     `  
    
-    $("#your-t-shirt span").html(` (${allTshirts.length + 1})`);
+    $("#your-t-shirt span:last-child").html(` (${allTshirts.length + 1})`);
 
     allTshirts.push(newTshirts);
     if (allTshirts.length === 1){
