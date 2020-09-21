@@ -74,10 +74,23 @@ $(".btn--make-shirt").click(function(){
     
     <div class="carousel-item">
     
-        <div class="t-shirt-background">
+        <div class="t-shirt-background--blue">
         <img class="t-shirt-image mx-auto d-block"  src="${tShirtImage}" alt="${tShirtTitle}">
+        
+        <div class="carousel-caption">
+            <h5>Choose color:</h5>        
+            <div class="btn-toolbar d-block" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary border border-success btn--blue"></button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="Second group">
+                <button type="button" class="btn btn-light border border-success btn--white"></button>
+            </div>  
+        </div>
+            <button type="button" class="btn btn-success mt-3 p-3"><i class="fas fa-shopping-basket"></i></br>Add to your basket</button>        
         </div>
         
+        </div>        
     </div>
     
     `  
@@ -89,13 +102,12 @@ $(".btn--make-shirt").click(function(){
         allTshirts[0]= allTshirts[0].replace("carousel-item", "carousel-item active");
     }
     
-    console.log(allTshirts);
-    
+    console.log(allTshirts);  
 
     $(".selected-t-shirts").html(
         `<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                ${allTshirts.join().replace(/,/g, "")}
+                ${allTshirts.join().replace(/,/g, "")}                
             </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -105,30 +117,25 @@ $(".btn--make-shirt").click(function(){
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-        </div>        
+        
+        </div>
+             
         `
-
+   
     )
 
- 
-
-    /* var newTshirts =   `<div class="col-10 col-sm-3 align-items-center selected-t-shirts-article"><div><p>${tShirtTitle}</p><img mx-auto my-auto d-block src="${tShirtImage}"></div></div>`;
-    allTshirts.push(newTshirts);
-    console.log(allTshirts);
-    $(".selected-t-shirts").html(allTshirts.join().replace(/,/g, "")) */
+ $(".btn--blue").on("click", function(){
+    $(this).parent().parent().prev().css("color", "rgb(248, 249, 250)");
+    $(this).parent().parent().parent().parent().removeClass("t-shirt-background--white").addClass("t-shirt-background--blue");
 })
 
+$(".btn--white").on("click", function(){
+    $(this).parent().parent().prev().css("color", "rgb(0, 123, 255)");
+    $(this).parent().parent().parent().parent().removeClass("t-shirt-background--blue").addClass("t-shirt-background--white");
+})
 
-
-
-
-
-
-
+})
 }
-
-
-
 
 }
 
@@ -148,8 +155,6 @@ $("#your-t-shirt").on("click", function(){
     $("#search-results").hide();
     $("#all-t-shirts").show();
 });
-
-
 
 })
 

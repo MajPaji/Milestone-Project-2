@@ -153,6 +153,8 @@ body{
  
 }
 
+
+
 .t-shirt-frame{
     
 }
@@ -176,17 +178,29 @@ body{
     
 }
 
-.t-shirt-background{
+.t-shirt-background--blue{
     height: 700px;
-    width: auto;
-    
+    width: auto;    
   background: url("../images/t-shirt-frame-blue.png") center center ;
   background-repeat: no-repeat;
   background-size: contain;
   -moz-background-size: contain;
   -webkit-background-size: contain;
   -o-background-size: contain;
-  background-position: ;
-    position: ;
+  
    
 }
+
+.t-shirt-background--white{
+    height: 700px;
+    width: auto;    
+  background: url("../images/t-shirt-frame-white.png") center center ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -moz-background-size: contain;
+  -webkit-background-size: contain;
+  -o-background-size: contain;
+  
+   
+}
+
