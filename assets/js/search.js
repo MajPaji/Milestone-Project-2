@@ -133,6 +133,10 @@ $(".btn--make-shirt").click(function(){
 }
 
 $(document).ready(function(){
+    $("#all-t-shirts").hide();
+    $("#search-results").show();
+    $("#search-box-data").show();
+
 $("#search-page").on("click", function(){
     $("#all-t-shirts").hide();
     $("#search-results").show();
