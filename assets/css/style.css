@@ -15,7 +15,7 @@ body{
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 1px;
-  padding: 28px;
+  padding: 5px;
 }
 
 .navbar-collapse{
@@ -148,13 +148,10 @@ body{
 
 #all-t-shirts h2{
    font-family: "Exo", sans-serif;
-  color: #fafafa;
-  
+  color: #fafafa;  
   letter-spacing: 1px;
-  margin-bottom: 20px;
   padding: 0px;
-  text-align: center;
- 
+  text-align: center; 
 }
 
 
@@ -173,17 +170,11 @@ body{
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
-        transform: translateY(-50%);
-
-    
-    
-    
-
-    
+        transform: translateY(-50%);    
 }
 
 .t-shirt-background--blue{
-    height: 700px;
+    height: 70vh;
     width: auto;    
   background: url("../images/t-shirt-frame-blue.png") center center ;
   background-repeat: no-repeat;
@@ -196,7 +187,7 @@ body{
 }
 
 .t-shirt-background--white{
-    height: 700px;
+    height: 70vh;
     width: auto;    
   background: url("../images/t-shirt-frame-white.png") center center ;
   background-repeat: no-repeat;
@@ -208,3 +199,24 @@ body{
    
 }
 
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 0%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/* -------------------------------------------------------------------- basket t-shirts */
+
+#basket-t-shirts h2{
+   font-family: "Exo", sans-serif;
+  color: #fafafa;  
+  letter-spacing: 1px;
+  padding: 0px;
+  text-align: center; 
+}

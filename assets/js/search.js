@@ -65,6 +65,7 @@ $(".data-image-article img").on("click", function(){
 
     
 var allTshirts = [];
+var basketTshirts = [];
 $(".btn--make-shirt").click(function(){
      console.log("hello");    
     var tShirtTitle = $(this).siblings("h4").html();
@@ -77,8 +78,9 @@ $(".btn--make-shirt").click(function(){
         <div class="t-shirt-background--blue">
         <img class="t-shirt-image mx-auto d-block"  src="${tShirtImage}" alt="${tShirtTitle}">
         
+        
         <div class="carousel-caption">
-            <h5>Choose color:</h5>        
+            <h5 class="mb-0">color:</h5>        
             <div class="btn-toolbar d-block" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group mr-2" role="group" aria-label="First group">
                 <button type="button" class="btn btn-primary border border-success btn--blue"></button>
@@ -87,7 +89,16 @@ $(".btn--make-shirt").click(function(){
                 <button type="button" class="btn btn-light border border-success btn--white"></button>
             </div>  
         </div>
-            <button type="button" class="btn btn-success mt-3 p-3"><i class="fas fa-shopping-basket"></i></br>Add to your basket</button>        
+            <form class="mt-1">
+            <span>size: </span>
+                <label for="small"><input type="radio" name="size" id="small" value="small"> Small</label>
+                        
+                <label for="medium"><input type="radio" name="size" id="medium" value="medium" checked> Medium</label>
+                    
+                <label for="large"><input type="radio" name="size" id="large" value="larg"> Large</label>
+                                  
+            </form>
+               <button type="button" class="btn btn-success p-3 btn--basket"><i class="fas fa-shopping-basket"></i></br>Add to your basket</button> 
         </div>
         
         </div>        
@@ -127,12 +138,50 @@ $(".btn--make-shirt").click(function(){
  $(".btn--blue").on("click", function(){
     $(this).parent().parent().prev().css("color", "rgb(248, 249, 250)");
     $(this).parent().parent().parent().parent().removeClass("t-shirt-background--white").addClass("t-shirt-background--blue");
+    $(this).parent().parent().next().css("color", "rgb(248, 249, 250)");
 })
 
 $(".btn--white").on("click", function(){
     $(this).parent().parent().prev().css("color", "rgb(0, 123, 255)");
     $(this).parent().parent().parent().parent().removeClass("t-shirt-background--blue").addClass("t-shirt-background--white");
+     $(this).parent().parent().next().css("color", "rgb(0, 123, 255)");
 })
+
+$(".btn--basket").on("click", function(){
+    var tShirtImageTitle = $(this).parent().prev().attr("alt");
+    var tShirtImageSource = $(this).parent().prev().attr("src");
+    var tShirtSize = $(this).prev().children().children("input[name='size']:checked").val();
+    var tShirtColor = $(this).parent().prev().parent().attr('class').substr(20);
+
+    console.log(tShirtImageTitle + tShirtImageSource + tShirtSize + tShirtColor);
+
+    var newBasketTshirt = `
+    <tr>
+        <td><a href=${tShirtImageSource} target="_blank">${tShirtImageTitle}</a></td>
+        <td>${tShirtSize}</td>
+        <td>${tShirtColor}</td>
+        <td><i class="fas fa-trash-alt"></i></td>    
+    </tr>
+    `
+    console.log(newBasketTshirt);
+    basketTshirts.push(newBasketTshirt);
+
+    $(".shopping-t-shirts").html(
+        `
+        <table>
+            <tr>
+            <th>Image Title</th>
+            <th>tShirt Size</th>
+            <th>yShirt Color</th>
+            </tr>
+            ${basketTshirts}        
+        </table>
+        `
+    )
+
+})
+
+
 
 })
 }
@@ -141,11 +190,13 @@ $(".btn--white").on("click", function(){
 
 $(document).ready(function(){
     $("#all-t-shirts").hide();
+    $("#basket-t-shirts").hide();
     $("#search-results").show();
-    $("#search-box-data").show();
+    $("#search-box-data").show();    
 
 $("#search-page").on("click", function(){
     $("#all-t-shirts").hide();
+    $("#basket-t-shirts").hide();
     $("#search-results").show();
     $("#search-box-data").show();
 });
@@ -153,7 +204,15 @@ $("#search-page").on("click", function(){
 $("#your-t-shirt").on("click", function(){
     $("#search-box-data").hide();
     $("#search-results").hide();
+    $("#basket-t-shirts").hide();
     $("#all-t-shirts").show();
+});
+
+$("#basket").on("click", function(){
+    $("#search-box-data").hide();
+    $("#search-results").hide();
+    $("#all-t-shirts").hide();
+    $("#basket-t-shirts").show();
 });
 
 })
