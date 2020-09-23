@@ -151,7 +151,8 @@ body{
   color: #fafafa;  
   letter-spacing: 1px;
   padding: 0px;
-  text-align: center; 
+  text-align: center;
+  margin-top: 5%;
 }
 
 
@@ -213,10 +214,32 @@ body{
 
 /* -------------------------------------------------------------------- basket t-shirts */
 
+#basket-t-shirts{
+    margin-top: 5%;
+}
+
 #basket-t-shirts h2{
    font-family: "Exo", sans-serif;
   color: #fafafa;  
   letter-spacing: 1px;
   padding: 0px;
   text-align: center; 
+}
+
+#shoping-list-table{
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: "Exo", sans-serif;
+    color: #fafafa;  
+    letter-spacing: 1px;
+
+}
+
+#basket span:last-child {
+    color: skyblue;
+}
+
+.trash-basket:hover{
+    color: red;
 }

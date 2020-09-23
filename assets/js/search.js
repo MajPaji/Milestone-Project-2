@@ -66,6 +66,7 @@ $(".data-image-article img").on("click", function(){
     
 var allTshirts = [];
 var basketTshirts = [];
+var numeberOfItems = 0;
 $(".btn--make-shirt").click(function(){
      console.log("hello");    
     var tShirtTitle = $(this).siblings("h4").html();
@@ -147,37 +148,58 @@ $(".btn--white").on("click", function(){
      $(this).parent().parent().next().css("color", "rgb(0, 123, 255)");
 })
 
+
+
 $(".btn--basket").on("click", function(){
     var tShirtImageTitle = $(this).parent().prev().attr("alt");
     var tShirtImageSource = $(this).parent().prev().attr("src");
     var tShirtSize = $(this).prev().children().children("input[name='size']:checked").val();
     var tShirtColor = $(this).parent().prev().parent().attr('class').substr(20);
 
-    console.log(tShirtImageTitle + tShirtImageSource + tShirtSize + tShirtColor);
+   
+    $("#basket span:last-child").html(` (${++numeberOfItems})`);
 
     var newBasketTshirt = `
     <tr>
-        <td><a href=${tShirtImageSource} target="_blank">${tShirtImageTitle}</a></td>
-        <td>${tShirtSize}</td>
-        <td>${tShirtColor}</td>
-        <td><i class="fas fa-trash-alt"></i></td>    
+        <td>${tShirtSize}</td> 
+        <td>${tShirtColor}</td>   
+        <td><a href=${tShirtImageSource} target="_blank">${tShirtImageTitle}</a></td>  
+        <td class="trash-basket"><i class="fas fa-trash-alt"></i></td>    
     </tr>
     `
-    console.log(newBasketTshirt);
+    
     basketTshirts.push(newBasketTshirt);
-
+    console.log(basketTshirts);
     $(".shopping-t-shirts").html(
-        `
-        <table>
+        `<table id="shoping-list-table" class="table table-hover table-lg table-dark">
             <tr>
-            <th>Image Title</th>
-            <th>tShirt Size</th>
-            <th>yShirt Color</th>
+            <th scope="col">tShirt Size</th>
+            <th scope="col">tShirt Color</th>
+            <th scope="col">Image Title</th>                   
             </tr>
             ${basketTshirts}        
         </table>
         `
     )
+
+$(".trash-basket").on("click", function(){
+    var remainingBasketTshirtsItems = $(this).parent().siblings();
+    $(this).parent().detach();
+    $("#basket span:last-child").html(` (${--numeberOfItems})`); 
+    console.log(remainingBasketTshirtsItems);
+    tableRow = [];
+    
+    for(i=1 ; i <= numeberOfItems; i++ ){
+        tableRow.push(`<tr>${remainingBasketTshirtsItems[i].innerHTML}</tr>`);
+    }
+
+    console.log(tableRow);
+
+    basketTshirts = tableRow;
+    
+    
+        
+   })
 
 })
 
