@@ -114,7 +114,7 @@ $(".btn--make-shirt").click(function(){
         allTshirts[0]= allTshirts[0].replace("carousel-item", "carousel-item active");
     }
     
-    console.log(allTshirts);  
+    
 
     $(".selected-t-shirts").html(
         `<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -169,9 +169,12 @@ $(".btn--basket").on("click", function(){
     `
     
     basketTshirts.push(newBasketTshirt);
+
     console.log(basketTshirts);
     $(".shopping-t-shirts").html(
-        `<table id="shoping-list-table" class="table table-hover table-lg table-dark">
+        `
+        <form class="form-group" onsubmit="return sendMail(this);">    	
+        <table id="shoping-list-table" class="table table-hover table-lg table-dark">
             <tr>
             <th scope="col">tShirt Size</th>
             <th scope="col">tShirt Color</th>
@@ -179,6 +182,12 @@ $(".btn--basket").on("click", function(){
             </tr>
             ${basketTshirts}        
         </table>
+        <input type="text" class="form-control form-shopping mt-5" name="name" id="fullname" placeholder="Name" required>
+        <input type="email" class="form-control form-shopping mt-3" name="emailaddress" id="emailaddress" placeholder="Email" required>
+        <small id="emailHelp" class="form-text text-muted form-shopping">We'll never share your name or email with anyone else.</small>
+        <button type="submit" class="btn btn-success btn-lg form-shopping d-block mt-3">Order</button>
+        </form>
+        
         `
     )
 
@@ -193,13 +202,12 @@ $(".trash-basket").on("click", function(){
         tableRow.push(`<tr>${remainingBasketTshirtsItems[i].innerHTML}</tr>`);
     }
 
-    console.log(tableRow);
-
+    
     basketTshirts = tableRow;
     
-    
         
-   })
+   });
+   
 
 })
 

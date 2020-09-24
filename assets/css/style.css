@@ -243,3 +243,15 @@ body{
 .trash-basket:hover{
     color: red;
 }
+
+.form-shopping{
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
+    border: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    
+}
