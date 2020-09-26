@@ -39,8 +39,21 @@ xhr.send();
 xhr.onreadystatechange = function(){
     if(this.staus = 200 && this.readyState == 4){
        console.dir(JSON.parse(this.responseText));
-        var data = JSON.parse(this.responseText);
-        var dataImage = data.collection.items;
+        //var data = JSON.parse(this.responseText);
+        receiveData(JSON.parse(this.responseText))              
+    } else {
+        imageFiles = `
+            <div class="load-image">
+                <h2><i class="fas fa-user-astronaut mb-3" aria-hidden="true"></i><br/> No response from NASA server</h2>
+            </div>`
+    }
+
+}
+}
+
+
+function receiveData(data){
+ var dataImage = data.collection.items;
         console.log(dataImage);
         var imageFiles = [];
         var imageDescribtion = [];
@@ -56,14 +69,7 @@ xhr.onreadystatechange = function(){
                         <button type="button" class="btn btn-primary mb-3 btn--make-shirt">Add to your T-shirt</button>
                 </div>
             </div>`)
-        })        
-    } else {
-        imageFiles = `
-            <div class="load-image">
-                <h2><i class="fas fa-user-astronaut mb-3" aria-hidden="true"></i><br/> No response from NASA server</h2>
-            </div>`
-    }
-
+        }) 
 if (imageFiles == ""){
             imageFiles = `
             <div class="load-image">
@@ -210,7 +216,7 @@ $(".trash-basket").on("click", function(){
 })
 
 })
-}
+
 }
 
 $(document).ready(function(){
@@ -239,7 +245,6 @@ $("#basket").on("click", function(){
     $("#all-t-shirts").hide();
     $("#basket-t-shirts").show();
 });
-
 })
 
 
