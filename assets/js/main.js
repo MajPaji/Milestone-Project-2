@@ -1,8 +1,6 @@
-
-
 function imageLoaderHTML(){
    $(".data").html(`
-   <div id="load-image">
+   <div class="load-image">
         <img src="assets/images/load-image.gif" alt="laoding ...">
         <h2>Loading...</h2>
    </div>`)
@@ -22,6 +20,13 @@ $("#btnSearch").click(function() {
 
 function getImageHTML(){
 var searchName = $("#search").val();
+if (!searchName){
+    $(".data").html(`
+   <div class="load-image">
+        <h2><i class="fas fa-user-astronaut mb-3" aria-hidden="true"></i><br/> Please search some words</h2>
+   </div>`);
+   return;
+}
 console.log(searchName);
 var searchItem = encodeURIComponent(searchName);
 console.log(searchItem);
@@ -51,8 +56,20 @@ xhr.onreadystatechange = function(){
                         <button type="button" class="btn btn-primary mb-3 btn--make-shirt">Add to your T-shirt</button>
                 </div>
             </div>`)
-        })     
+        })        
+    } else {
+        imageFiles = `
+            <div class="load-image">
+                <h2><i class="fas fa-user-astronaut mb-3" aria-hidden="true"></i><br/> No response from NASA server</h2>
+            </div>`
     }
+
+if (imageFiles == ""){
+            imageFiles = `
+            <div class="load-image">
+                <h2><i class="fas fa-satellite mb-3" aria-hidden="true"></i><br/> Nothing found for your keywords</h2>
+            </div>`            
+        }   
  
 $(".data").html(`
             <div class="sky-section container-fluid">
@@ -74,11 +91,9 @@ $(".btn--make-shirt").click(function(){
 
     var newTshirts = `
     
-    <div class="carousel-item">
-    
+    <div class="carousel-item">    
         <div class="t-shirt-background--blue">
-        <img class="t-shirt-image mx-auto d-block"  src="${tShirtImage}" alt="${tShirtTitle}">
-        
+        <img class="t-shirt-image mx-auto d-block"  src="${tShirtImage}" alt="${tShirtTitle}"> 
         
         <div class="carousel-caption">
             <h5 class="mb-0">color:</h5>        
@@ -92,12 +107,9 @@ $(".btn--make-shirt").click(function(){
         </div>
             <form class="mt-1">
             <span>size: </span>
-                <label for="small"><input type="radio" name="size" id="small" value="small"> Small</label>
-                        
-                <label for="medium"><input type="radio" name="size" id="medium" value="medium" checked> Medium</label>
-                    
-                <label for="large"><input type="radio" name="size" id="large" value="larg"> Large</label>
-                                  
+                <label for="small"><input type="radio" name="size" id="small" value="small"> Small</label>                        
+                <label for="medium"><input type="radio" name="size" id="medium" value="medium" checked> Medium</label>                    
+                <label for="large"><input type="radio" name="size" id="large" value="larg"> Large</label>                                  
             </form>
                <button type="button" class="btn btn-success p-3 btn--basket"><i class="fas fa-shopping-basket"></i></br>Add to your basket</button> 
         </div>
@@ -112,9 +124,7 @@ $(".btn--make-shirt").click(function(){
     allTshirts.push(newTshirts);
     if (allTshirts.length === 1){
         allTshirts[0]= allTshirts[0].replace("carousel-item", "carousel-item active");
-    }
-    
-    
+    }    
 
     $(".selected-t-shirts").html(
         `<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -128,12 +138,9 @@ $(".btn--make-shirt").click(function(){
         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-        </a>
-        
-        </div>
-             
-        `
-   
+        </a>        
+        </div>             
+        ` 
     )
 
  $(".btn--blue").on("click", function(){
@@ -148,8 +155,6 @@ $(".btn--white").on("click", function(){
      $(this).parent().parent().next().css("color", "rgb(0, 123, 255)");
 })
 
-
-
 $(".btn--basket").on("click", function(){
     var tShirtImageTitle = $(this).parent().prev().attr("alt");
     var tShirtImageSource = $(this).parent().prev().attr("src");
@@ -157,7 +162,7 @@ $(".btn--basket").on("click", function(){
     var tShirtColor = $(this).parent().prev().parent().attr('class').substr(20);
 
    
-    $("#basket span:last-child").html(` (${++numeberOfItems})`);
+$("#basket span:last-child").html(` (${++numeberOfItems})`);
 
     var newBasketTshirt = `
     <tr>
@@ -174,18 +179,18 @@ $(".btn--basket").on("click", function(){
     $(".shopping-t-shirts").html(
         `
         <form class="form-group" onsubmit="return sendMail(this);">    	
-        <table id="shoping-list-table" class="table table-hover table-lg table-dark">
-            <tr>
-            <th scope="col">tShirt Size</th>
-            <th scope="col">tShirt Color</th>
-            <th scope="col">Image Title</th>                   
-            </tr>
-            ${basketTshirts}        
-        </table>
-        <input type="text" class="form-control form-shopping mt-5" name="name" id="fullname" placeholder="Name" required>
-        <input type="email" class="form-control form-shopping mt-3" name="emailaddress" id="emailaddress" placeholder="Email" required>
-        <small id="emailHelp" class="form-text text-muted form-shopping">We'll never share your name or email with anyone else.</small>
-        <button type="submit" class="btn btn-success btn-lg form-shopping d-block mt-3">Order</button>
+            <table id="shoping-list-table" class="table table-hover table-lg table-dark">
+                <tr>
+                <th scope="col">tShirt Size</th>
+                <th scope="col">tShirt Color</th>
+                <th scope="col">Image Title</th>                   
+                </tr>
+                ${basketTshirts}        
+            </table>
+            <input type="text" class="form-control form-shopping mt-5" name="name" id="fullname" placeholder="Name" required>
+            <input type="email" class="form-control form-shopping mt-3" name="emailaddress" id="emailaddress" placeholder="Email" required>
+            <small id="emailHelp" class="form-text text-muted form-shopping">We'll never share your name or email with anyone else.</small>
+            <button type="submit" class="btn btn-success btn-lg form-shopping d-block mt-3">Order</button>
         </form>
         
         `
@@ -196,26 +201,16 @@ $(".trash-basket").on("click", function(){
     $(this).parent().detach();
     $("#basket span:last-child").html(` (${--numeberOfItems})`); 
     console.log(remainingBasketTshirtsItems);
-    tableRow = [];
-    
+    tableRow = [];    
     for(i=1 ; i <= numeberOfItems; i++ ){
         tableRow.push(`<tr>${remainingBasketTshirtsItems[i].innerHTML}</tr>`);
-    }
-
-    
-    basketTshirts = tableRow;
-    
-        
+    }    
+    basketTshirts = tableRow;        
    });
-   
-
 })
-
-
 
 })
 }
-
 }
 
 $(document).ready(function(){

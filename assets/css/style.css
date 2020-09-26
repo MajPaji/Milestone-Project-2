@@ -106,7 +106,7 @@ body{
 
 }
 
-#load-image{
+.load-image{
     position: relative;
     margin-top: 100px;
     text-align: center;
@@ -114,13 +114,17 @@ body{
 
 }
 
-#load-image img{
+.load-image img{
     height: 150px; 
     border-radius: 0px;
 	border: none;	
     box-shadow: none;
 	float: none;
     display: inline-block;    
+}
+
+.load-image i{
+    font-size: 80px;  
 }
 
 .data-image-title{
@@ -131,7 +135,7 @@ body{
 }
 
 .data-image-description{
-  
+  background-color: rgba(0, 0, 0, 0.5);
   font-family: "Exo", sans-serif;
   color: #fafafa;
   font-size: 16px;
@@ -219,7 +223,7 @@ body{
 }
 
 #basket-t-shirts h2{
-   font-family: "Exo", sans-serif;
+    font-family: "Exo", sans-serif;
   color: #fafafa;  
   letter-spacing: 1px;
   padding: 0px;
@@ -255,3 +259,21 @@ body{
     border-bottom-right-radius: 0;
     
 }
+
+#ordering-message{
+    font-family: "Exo", sans-serif;
+    letter-spacing: 1px;
+  padding: 0px;
+  text-align: center; 
+}
+
+.ordering-message--success{
+    color: greenyellow;
+
+}
+
+.ordering-message--fail{
+    color: rgb(236, 26, 57);
+}
+
+

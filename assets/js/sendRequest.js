@@ -10,10 +10,10 @@ function sendMail(requestForm){
         
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
-            $("#ordering-message").html(`<div class="text-monospace badge badge-success">SUCCESS!, Thank you for ordering!</div>`);
+            $("#ordering-message").html(`<div class="ordering-message--success">SUCCESS!, Thank you for ordering!</div>`);
             }, function(error) {
             console.log('FAILED...', error);
-            $("#ordering-message").html();
+            $("#ordering-message").html(`<div class="ordering-message--fail">Failed!, Sorry we did not receive your order!</div>`);
             });
 
             return false;
