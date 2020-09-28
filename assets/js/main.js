@@ -52,6 +52,40 @@ xhr.onreadystatechange = function(){
 }
 
 
+function tShirtSelector (image, title){
+return newTshirts = `
+    
+    <div class="carousel-item">    
+        <div class="t-shirt-background--blue">
+        <img class="t-shirt-image mx-auto d-block"  src="${image}" alt="${title}"> 
+        
+        <div class="carousel-caption">
+            <h5 class="mb-0">color:</h5>        
+            <div class="btn-toolbar d-block" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary border border-success btn--blue"></button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="Second group">
+                <button type="button" class="btn btn-light border border-success btn--white"></button>
+            </div>  
+        </div>
+            <form class="mt-1">
+            <span>size: </span>
+                <label for="small"><input type="radio" name="size" id="small" value="small"> Small</label>                        
+                <label for="medium"><input type="radio" name="size" id="medium" value="medium" checked> Medium</label>                    
+                <label for="large"><input type="radio" name="size" id="large" value="larg"> Large</label>                                  
+            </form>
+               <button type="button" class="btn btn-success p-3 btn--basket"><i class="fas fa-shopping-basket"></i></br>Add to your basket</button> 
+        </div>
+        
+        </div>        
+    </div>
+    
+    `  
+
+}
+
+
 function receiveData(data){
  var dataImage = data.collection.items;
         console.log(dataImage);
@@ -85,7 +119,6 @@ $(".data-image-text").hide();
 $(".data-image-article img").on("click", function(){
     $(this).siblings().slideToggle();
 })
-
     
 var allTshirts = [];
 var basketTshirts = [];
@@ -95,36 +128,8 @@ $(".btn--make-shirt").click(function(){
     var tShirtTitle = $(this).siblings("h4").html();
     var tShirtImage = $(this).parent().prev().attr("src");
 
-    var newTshirts = `
+  tShirtSelector(tShirtImage, tShirtTitle);
     
-    <div class="carousel-item">    
-        <div class="t-shirt-background--blue">
-        <img class="t-shirt-image mx-auto d-block"  src="${tShirtImage}" alt="${tShirtTitle}"> 
-        
-        <div class="carousel-caption">
-            <h5 class="mb-0">color:</h5>        
-            <div class="btn-toolbar d-block" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group mr-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary border border-success btn--blue"></button>
-            </div>
-            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                <button type="button" class="btn btn-light border border-success btn--white"></button>
-            </div>  
-        </div>
-            <form class="mt-1">
-            <span>size: </span>
-                <label for="small"><input type="radio" name="size" id="small" value="small"> Small</label>                        
-                <label for="medium"><input type="radio" name="size" id="medium" value="medium" checked> Medium</label>                    
-                <label for="large"><input type="radio" name="size" id="large" value="larg"> Large</label>                                  
-            </form>
-               <button type="button" class="btn btn-success p-3 btn--basket"><i class="fas fa-shopping-basket"></i></br>Add to your basket</button> 
-        </div>
-        
-        </div>        
-    </div>
-    
-    `  
-   
     $("#your-t-shirt span:last-child").html(` (${allTshirts.length + 1})`);
 
     allTshirts.push(newTshirts);
@@ -161,10 +166,25 @@ $(".btn--white").on("click", function(){
      $(this).parent().parent().next().css("color", "rgb(0, 123, 255)");
 })
 
+$("label[for='small']").on("click", function(){
+    $(this).parent().parent().parent().css("height", "65vh");
+});
+
+$("label[for='medium']").on("click", function(){
+    $(this).parent().parent().parent().css("height", "70vh");
+});
+
+$("label[for='large']").on("click", function(){
+    $(this).parent().parent().parent().css("height", "75vh");
+});
+
+
+
 $(".btn--basket").on("click", function(){
     var tShirtImageTitle = $(this).parent().prev().attr("alt");
     var tShirtImageSource = $(this).parent().prev().attr("src");
     var tShirtSize = $(this).prev().children().children("input[name='size']:checked").val();
+    console.log("tshirt size   " + tShirtSize);
     var tShirtColor = $(this).parent().prev().parent().attr('class').substr(20);
 
    
