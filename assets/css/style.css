@@ -6,7 +6,7 @@ body{
 }
 
 #resizable { width: 150px; height: 150px; padding: 0.5em; }
-  #resizable h3 { text-align: center; margin: 0; }
+#resizable h3 { text-align: center; margin: 0; }
 
 /* -------------------------------------------------------------------- navigation */
 
@@ -63,6 +63,10 @@ body{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-left: none;
+}
+
+#search-box-data{
+    margin-top: 75px; 
 }
 
 .form-control{
