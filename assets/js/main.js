@@ -5,7 +5,7 @@
             <img src="assets/images/load-image.gif" alt="laoding ...">
             <h2>Loading...</h2>
     </div>`);
-    };
+    }
 //.
 
 //this part call the getImageHTML function when user press enter or click on the search icon
@@ -47,10 +47,10 @@
                 imageFiles = `
                     <div class="load-image">
                         <h2><i class="fas fa-user-astronaut mb-3" aria-hidden="true"></i><br/> No response from NASA server</h2>
-                    </div>`
+                    </div>`;
             }
 
-        }
+        };
     }
 //.
 
@@ -80,7 +80,7 @@
                 <button type="button" class="btn btn-success p-3 btn--basket"><i class="fas fa-shopping-basket"></i><br>Add to your basket</button> 
             </div>            
             </div>        
-        </div>`
+        </div>`;
     }
 //.
 
@@ -98,13 +98,13 @@
                                 </div>
                                 <button type="button" class="btn btn-primary mb-3 btn--make-shirt">Add to your T-shirt</button>
                         </div>
-                    </div>`)
-                }) 
+                    </div>`);
+                }); 
         if (imageFiles == ""){
                     imageFiles = `
                     <div class="load-image">
                         <h2><i class="fas fa-satellite mb-3" aria-hidden="true"></i><br/> Nothing found for your keywords</h2>
-                    </div>`            
+                    </div>`;            
                 }   
         
         $(".data").html(`
@@ -115,7 +115,7 @@
         
         $(".data-image-article img").on("click", function(){
             $(this).siblings().slideToggle();                   //toggle the image title and description.
-        })
+        });
             
         let allTshirts = [];
         let basketTshirts = [];
@@ -150,20 +150,20 @@
                 </a>        
                 </div>             
                 ` 
-        )
+        );
 
         
         $(".btn--blue").on("click", function(){                                     //change color of tShirt to blue and icons to white.
             $(this).parent().parent().prev().css("color", "rgb(248, 249, 250)");
             $(this).parent().parent().parent().parent().removeClass("t-shirt-background--white").addClass("t-shirt-background--blue");
             $(this).parent().parent().next().css("color", "rgb(248, 249, 250)");
-        })
+        });
 
         $(".btn--white").on("click", function(){                                    //change color of tShirt to white and icons to blue.
             $(this).parent().parent().prev().css("color", "rgb(0, 123, 255)");
             $(this).parent().parent().parent().parent().removeClass("t-shirt-background--blue").addClass("t-shirt-background--white");
             $(this).parent().parent().next().css("color", "rgb(0, 123, 255)");
-        })
+        });
 
         $("label[for='small']").on("click", function(){                             //demonstrate small size of the tShirt.
             $(this).parent().parent().parent().css("height", "65vh");
@@ -195,7 +195,7 @@
                 <td><a href=${tShirtImageSource} target="_blank">${tShirtImageTitle}</a></td>  
                 <td class="trash-basket"><i class="fas fa-trash-alt"></i></td>    
             </tr>
-            `
+            `;
             
             basketTshirts.push(newBasketTshirt);
 
@@ -217,7 +217,7 @@
                 </form>
                 
                 `
-            )
+            );
 
         $(".trash-basket").on("click", function(){                              //demonstrate medium size of the tShirt.
             let remainingBasketTshirtsItems = $(this).parent().siblings();
@@ -229,10 +229,10 @@
             }    
             basketTshirts = tableRow;        
         });
-        })
+        });
         //.
 
-        })
+        });
         }
 //.
 
@@ -263,14 +263,5 @@ $("#basket").on("click", function(){
     $("#all-t-shirts").hide();
     $("#basket-t-shirts").show();
 });
-})
+});
 //.
-
-
-
-
-
-
-
-
-

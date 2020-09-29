@@ -151,6 +151,12 @@ body{
   
 }
 
+.hr-line{
+    background-color: #007bff;
+    width: 150px;
+    height: 3px;
+}
+
 
 /* -------------------------------------------------------------------- selected t-shirts */
 
