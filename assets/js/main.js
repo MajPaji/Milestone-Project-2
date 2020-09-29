@@ -57,9 +57,10 @@
 
 // this function make tShirt from selected image by user
     function tShirtSelector (image, title){
-    return newTshirts = `<div class="carousel-item">    
+    return newTshirts = `
+        <div class="carousel-item">    
             <div class="t-shirt-background--blue">
-            <img class="t-shirt-image mx-auto d-block"  src="${image}" alt="${title}">             
+                <img class="t-shirt-image mx-auto d-block"  src="${image}" alt="${title}">             
             <div class="carousel-caption">
                 <h5 class="mb-0">color:</h5>        
                 <div class="btn-toolbar d-block" role="toolbar" aria-label="Toolbar with button groups">
@@ -74,11 +75,10 @@
                 <span>size: </span>
                     <label for="small"><input type="radio" name="size" id="small" value="small"> Small</label>                        
                     <label for="medium"><input type="radio" name="size" id="medium" value="medium" checked> Medium</label>                    
-                    <label for="large"><input type="radio" name="size" id="large" value="larg"> Large</label>                                  
+                    <label for="large"><input type="radio" name="size" id="large" value="large"> Large</label>                                  
                 </form>
                 <button type="button" class="btn btn-success p-3 btn--basket"><i class="fas fa-shopping-basket"></i><br>Add to your basket</button> 
-            </div>
-            
+            </div>            
             </div>        
         </div>`
     }
