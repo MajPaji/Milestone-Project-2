@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap, https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
-
-body{
-    background-color: rgb(0, 0, 0);
+body {
+  background-color: rgb(0, 0, 0);
 }
 
-#resizable { width: 150px; height: 150px; padding: 0.5em; }
-#resizable h3 { text-align: center; margin: 0; }
+#resizable {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+}
+#resizable h3 {
+  text-align: center;
+  margin: 0;
+}
 
 /* -------------------------------------------------------------------- navigation */
 
@@ -18,13 +24,13 @@ body{
   padding: 5px;
 }
 
-.navbar-collapse{
-    display: contents;
+.navbar-collapse {
+  display: contents;
 }
 
 .nav-item {
-    margin-left: 25px;
-    font-weight: 500;
+  margin-left: 25px;
+  font-weight: 500;
 }
 
 .navbar-bg-color {
@@ -39,52 +45,48 @@ body{
   margin: 0px;
 }
 
-#your-t-shirt span:last-child{
-    color: skyblue;
+#your-t-shirt span:last-child {
+  color: skyblue;
 }
 
 /* -------------------------------------------------------------------- search box */
 
-.search-box{
-    text-align: center;
-    background-color: rgb(0, 0, 0);
-    font-family: "Exo", sans-serif;
-    color: #fafafa;
-    padding-top: 35px;
+.search-box {
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  font-family: "Exo", sans-serif;
+  color: #fafafa;
+  padding-top: 35px;
 }
 
-.search-box button{
-    height: 48px;
-    margin: 0px;
-    border: solid 3px #007bff;
-    background-color: #fafafa;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: none;
+.search-box button {
+  height: 48px;
+  margin: 0px;
+  border: solid 3px #007bff;
+  background-color: #fafafa;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
 }
 
-#search-box-data{
-    margin-top: 75px; 
+#search-box-data {
+  margin-top: 75px;
 }
 
-.form-control{
-    border: solid 3px #007bff;
-    border-top-left-radius: 23px;
-    border-bottom-left-radius: 23px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-right: none;
+.form-control {
+  border: solid 3px #007bff;
+  border-top-left-radius: 23px;
+  border-bottom-left-radius: 23px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: none;
 }
 
 /* -------------------------------------------------------------------- search box */
-/* .data-image{
-    display: inline-block;
-    width: 200px;
-} */
 
-.sky-section{
+.sky-section {
   min-height: 100vh;
   background: url("../images/background-sky.jpg") center center fixed;
   background-repeat: no-repeat;
@@ -94,51 +96,49 @@ body{
   -o-background-size: cover;
 }
 
-.data-image-article{
-    text-align: center;
+.data-image-article {
+  text-align: center;
 }
 
 .data-image-article img {
-	width: 100%;
-    max-width: 200px;
-	border-radius: 3px;
-	border: 3px solid #fff;
-	margin: 6px;
-    -webkit-box-shadow: 0 0 3px 3px #ebebeb;
-    box-shadow: 0 0 3px 3px #ebebeb;
-    cursor: n-resize;
-
+  width: 100%;
+  max-width: 200px;
+  border-radius: 3px;
+  border: 3px solid #fff;
+  margin: 6px;
+  -webkit-box-shadow: 0 0 3px 3px #ebebeb;
+  box-shadow: 0 0 3px 3px #ebebeb;
+  cursor: n-resize;
 }
 
-.load-image{
-    position: relative;
-    margin-top: 100px;
-    text-align: center;
-    color:#fafafa;
-
+.load-image {
+  position: relative;
+  margin-top: 100px;
+  text-align: center;
+  color: #fafafa;
 }
 
-.load-image img{
-    height: 150px; 
-    border-radius: 0px;
-	border: none;	
-    box-shadow: none;
-	float: none;
-    display: inline-block;    
+.load-image img {
+  height: 150px;
+  border-radius: 0px;
+  border: none;
+  box-shadow: none;
+  float: none;
+  display: inline-block;
 }
 
-.load-image i{
-    font-size: 80px;  
+.load-image i {
+  font-size: 80px;
 }
 
-.data-image-title{
-    font-family: "Roboto", sans-serif;
-    color: #fafafa;
-    margin: 20px 0px;
-    padding: 0;
+.data-image-title {
+  font-family: "Roboto", sans-serif;
+  color: #fafafa;
+  margin: 20px 0px;
+  padding: 0;
 }
 
-.data-image-description{
+.data-image-description {
   background-color: rgba(0, 0, 0, 0.5);
   font-family: "Exo", sans-serif;
   color: #fafafa;
@@ -148,142 +148,125 @@ body{
   padding: 0px;
   text-align: justify;
   overflow-wrap: break-word;
-  
 }
 
-.hr-line{
-    background-color: #007bff;
-    width: 150px;
-    height: 3px;
+.hr-line {
+  background-color: #007bff;
+  width: 150px;
+  height: 3px;
 }
-
 
 /* -------------------------------------------------------------------- selected t-shirts */
 
-#all-t-shirts h2{
-   font-family: "Exo", sans-serif;
-  color: #fafafa;  
+#all-t-shirts h2 {
+  font-family: "Exo", sans-serif;
+  color: #fafafa;
   letter-spacing: 1px;
   padding: 0px;
   text-align: center;
   margin-top: 5%;
 }
 
-
-
-.t-shirt-frame{
-    
+.t-shirt-image {
+  width: 20%;
+  max-width: 150px;
+  max-height: 250px;
+  height: auto;
+  top: 50%;
+  position: relative;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.t-shirt-image{
-    width: 20%;
-    max-width: 150px;
-    max-height: 250px;
-    height: auto;
-    top: 50%;
-        position: relative;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);    
-}
-
-.t-shirt-background--blue{
-    height: 70vh;
-    width: auto;    
-  background: url("../images/t-shirt-frame-blue.png") center center ;
+.t-shirt-background--blue {
+  height: 70vh;
+  width: auto;
+  background: url("../images/t-shirt-frame-blue.png") center center;
   background-repeat: no-repeat;
   background-size: contain;
   -moz-background-size: contain;
   -webkit-background-size: contain;
   -o-background-size: contain;
-  
-   
 }
 
-.t-shirt-background--white{
-    height: 70vh;
-    width: auto;    
-  background: url("../images/t-shirt-frame-white.png") center center ;
+.t-shirt-background--white {
+  height: 70vh;
+  width: auto;
+  background: url("../images/t-shirt-frame-white.png") center center;
   background-repeat: no-repeat;
   background-size: contain;
   -moz-background-size: contain;
   -webkit-background-size: contain;
   -o-background-size: contain;
-  
-   
 }
 
 .carousel-caption {
-    position: absolute;
-    right: 15%;
-    bottom: 0%;
-    left: 15%;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    text-align: center;
+  position: absolute;
+  right: 15%;
+  bottom: 0%;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
 }
 
 /* -------------------------------------------------------------------- basket t-shirts */
 
-#basket-t-shirts{
-    margin-top: 5%;
+#basket-t-shirts {
+  margin-top: 5%;
 }
 
-#basket-t-shirts h2{
-    font-family: "Exo", sans-serif;
-  color: #fafafa;  
+#basket-t-shirts h2 {
+  font-family: "Exo", sans-serif;
+  color: #fafafa;
   letter-spacing: 1px;
   padding: 0px;
-  text-align: center; 
+  text-align: center;
 }
 
-#shoping-list-table{
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: "Exo", sans-serif;
-    color: #fafafa;  
-    letter-spacing: 1px;
-
+#shoping-list-table {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Exo", sans-serif;
+  color: #fafafa;
+  letter-spacing: 1px;
 }
 
 #basket span:last-child {
-    color: skyblue;
+  color: skyblue;
 }
 
-.trash-basket:hover{
-    color: red;
+.trash-basket:hover {
+  color: red;
 }
 
-.form-shopping{
-    width: 70%;
-    max-width: 500px;
-    margin: 0 auto;
-    border: none;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    
+.form-shopping {
+  width: 70%;
+  max-width: 500px;
+  margin: 0 auto;
+  border: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-#ordering-message{
-    font-family: "Exo", sans-serif;
-    letter-spacing: 1px;
+#ordering-message {
+  font-family: "Exo", sans-serif;
+  letter-spacing: 1px;
   padding: 0px;
-  text-align: center; 
+  text-align: center;
 }
 
-.ordering-message--success{
-    color: greenyellow;
-
+.ordering-message--success {
+  color: greenyellow;
 }
 
-.ordering-message--fail{
-    color: rgb(236, 26, 57);
+.ordering-message--fail {
+  color: rgb(236, 26, 57);
 }
-
-
