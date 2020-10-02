@@ -1,5 +1,12 @@
 // using EmailJS service for ordering section.
 function sendMail(requestForm){
+
+    // This will run just in case user wants to submit an empty shopping list
+    if ($("#basket span:last-child").html() === " (0)"){
+        alert("There is nothing in the shopping list!");
+        return;
+    }
+    //.
     
     emailjs.send('gmail', 'template_ehew76m', {
                
