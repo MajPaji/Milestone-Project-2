@@ -176,13 +176,65 @@ The website was tested on:
     * There was no issue. The results can be seen in the following [link](testing/validation/opera_testing.pdf).
 * Internet explorer
     * Internet explorer had issue rendering the website. Therefore, an alert message added that user need to switch to other explorer for better user experience.
-    
+
+    ![pic](testing/manual-testing/alert-internet-explorer.png)
+
 * Microsoft edge
     * There was no issue. The results can be seen in the following [link](testing/validation/edge_testing.pdf).
 * Iphone 8
     * There was no issue. The results can be seen in the following [link](testing/validation/iphone8_testing.pdf).
 * Samsung S8
     * There was no issue. The results can be seen in the following [link](testing/validation/samsungS8_testing.pdf).
+
+## Deployment
+
+### GitHub
+
+The project can be deployed to GitHub Pages using following steps:
+1.	Log in to GitHub and locate the GitHub Repository.
+2.	At the top of the Repository, click on the "Settings" button on the menu.
+3.	Locate the "GitHub Pages" Section.
+4.	Under "Source", click the dropdown called "None" and select "Master Branch".
+5.	The page will automatically refresh.
+6.	Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+
+### Local Clone
+
+It is possible to make a copy of the repository on your computer using local clone. This can be done using following steps:
+1.	Log in to GitHub and locate the GitHub Repository.
+2.	Under the repository name, locate the "download code" button.
+3.	To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4.	Open Git Bash
+5.	Change the current working directory to the location where you want the cloned directory to be made.
+6.	Type git clone, and then paste the URL you copied in Step 3.
+
+> $ git clone https://github.com/MajPaji/NASA-T-shirt.git
+
+7.	Press Enter.
+
+### Forking the GitHub
+
+It is possible to make a copy of the original repository and request for changing repository owner through a pull request.
+ I order to forking GitHub repository, one should make following steps:
+
+1.	Log in to GitHub and locate the GitHub Repository
+2.	At the top of the Repository and not top of the page just above the "Settings" button on the menu, locate the "Fork" button.
+3.	Then there is a copy of the original repository in your GitHub account.
+
+## Content
+
+The text description for NASA images are from https://api.nasa.gov/
+
+## Media
+
+The NASA photos used in this site were obtained from https://api.nasa.gov/
+
+## Acknowledgements
+
+I acknowledge Gerry (my mentor) guidance on this project.
+
+
+
 
 
 
