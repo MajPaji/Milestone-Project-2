@@ -1,3 +1,4 @@
+![pic](assets/images/header_image.png)
 # Milestone project 2 
 ## NASA T-Shirt
 
