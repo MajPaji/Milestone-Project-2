@@ -6,7 +6,7 @@
             <h2>Loading...</h2>
     </div>`);
     }
-//.
+
 
 //this part call the getImageHTML function when user press enter or click on the search icon
     $("#search").keyup(function(event) {
@@ -20,7 +20,7 @@
     getImageHTML();  
     return false;
     });
-//.
+
 
 // this function get images from NASA REST API for the search keyword
     function getImageHTML(){
@@ -52,7 +52,7 @@
 
         };
     }
-//.
+
 
 
 // this function make tShirt from selected image by user
@@ -82,7 +82,7 @@
             </div>        
         </div>`;
     }
-//.
+
 
 // this part recive data from API and render the images, call for select t-Shirt, and shopping sections
     function receiveData(data){
@@ -230,11 +230,11 @@
             basketTshirts = tableRow;        
         });
         });
-        //.
+        
 
         });
         }
-//.
+
 
 //this part control which part of the index.html show or hide
 $(document).ready(function(){
@@ -264,4 +264,4 @@ $("#basket").on("click", function(){
     $("#basket-t-shirts").show();
 });
 });
-//.
+
