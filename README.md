@@ -6,7 +6,7 @@ Apollo Moon landing missions, Skylab space station, MARS exploration, and many o
 achievements available for people and makes it especially interesting for the new generation and young people. So, what could be better than 
 having a T-shirt which has a NASA picture on it, and you have learned about it before you put it on your T-Shirt? this feels awesome.
 
-This website aims to make it possible that one can search and choose the picture that one would like from NASA public shared images, also 
+This website aims to make it possible that you can search and choose the picture that you would like from NASA public shared images, also 
 learn a few words about the picture, and put it on your customized T-shirt that fits the best.
 
 
@@ -14,10 +14,10 @@ learn a few words about the picture, and put it on your customized T-shirt that 
 
 This website could increase people's knowledge about NASA organizations and their projects. This website could be useful for everybody, 
 but it would be especially good for young generations. 
-Or else, it could be for clothing-retail companies to sell new T-shirt designs. In this business model, people design their t-shirt that could be interesting for people.
+Or else, it could be for clothing-retail companies to sell new T-shirt designs. In this business model, people design their t-shirt that could be interesting for them.
 
 This website is consisting of three main sections. In the first section, it is possible to search in the NASA image database 
-with different keywords, which is free for public use, to find the desired image, then you learn about the picture. If you find it exciting, choose it as your T-shirt picture. In the second section, 
+with different keywords, to find the desired image, then you learn about the picture. If you find it exciting, choose it as your T-shirt picture. In the second section, 
 it is possible to select the size and color of the T-shirt and then add them to your shopping basket. In the last part, user order T-shirts via his/her email.
 
 During each search session, it is possible to come back to the search section and add more images to your T-shirt depository. 
@@ -25,7 +25,7 @@ Also, it is possible to remove/add a T-shirt on your shopping list. It makes the
 
 Here some user stories:
 
-* As a communication manager at NASA, I am happy with this website because it shows to people and especially young teenagers about many projects that we were running at NASA.
+* As a communication manager at NASA, I am happy with this website because it shows to people and especially young teenagers about many projects that we are running at NASA.
 
 * As a person who does a lot of cloth online shopping, this website allows me to design my favorite T-shirt.
 
@@ -56,16 +56,16 @@ to the shopping basket. Also, in this section is possible to come back to the ho
 3. Shopping basket
 
 In the shopping section, it is possible to see a summary of the order list in the table format. It is possible to remove items if the users change his/her mind. 
-It is also possible to come back to the T-shirts section to add more T-shirts. The order is going to be done through and email 
+It is also possible to come back to the T-shirts section to add more T-shirts. The order is going to be done through an email 
 API which the users provide a name and email address. After ordering, the users and owner of the website receive a confirmation email regarding the order.
 
 ## Features Left to Implement
 
-There are several possible features to implement They are listed, respectively:
+There are several possible features to implement. They are listed, respectively:
 
 1.	Increase the number of images coming from the NASA image API, which will give more choices to the users.
 2.	Give possibilities in which users can add text to the T-shirt.
-3.	Add other features that images added to them like coffee cup and hat, etc.
+3.	Add other features that images can be added to them like coffee cup, hat , and etc.
 
 ## Technologies Used
 
@@ -76,28 +76,25 @@ The following technologies have been used in this project:
     * Used for styling.
 * JavaScript
     * JavaScript was supposed to be the hero of this project
-* JQuery
+* [JQuery](https://jquery.com/)
     * This project used JavaScript in the form of JQuery to simplify DOM manipulation.
-* EmailJS
+* [EmailJS](https://www.emailjs.com/)
     * JavaScript API to send email directly from it.
-* Bootstrap4
+* [Bootstrap4](https://getbootstrap.com/)
     * CSS framework used for structuring and presenting the content.
-* Fontawsome
+* [Fontawsome](https://fontawesome.com/)
     * Used to create icons.
-* Google font
+* [Google font](https://fonts.google.com/)
     * Used for formatting the fonts.
 
 ## Testing
-
-This project aims to make people familiar with NASA projects though the pictures provided by NASA for the public. 
-Also, increase the sells for a clothing-retail company.
 
 This was achieved with following sections:
 
 1. Search you keyword
 
 Users can write any keywords to search in the NASA database, some example keywords written under the search box for guidance, 
-e.g. Earth, Skylab, Moon, Space station **(Figure 01)**. The responses from the NASA database will represent in a sky full of stars and planets **(Figure 02)**.
+e.g. Earth, Skylab, Moon, Space station **(Figure 01)**. The responses from the NASA database will represent with background of a sky full of stars and planets **(Figure 02)**.
 
 ![pic](testing/manual-testing/Figure01&02.png)
 
@@ -157,7 +154,7 @@ an alert will appear “There is nothing in the shopping list!” and the order 
 The HTML part was validated with [Markup Validation Service W3C®](https://validator.w3.org/) without any major problem. 
 There was some issue with having whitespace and non-hidden form control for attribute on element label which was resolved.
  Also, there is a warning regarding the type attribute for JavaScript resources. 
- Result can be seen in the following [link](testing/validation-services/Markup-validation-service-HTML.PNG).
+ Result can be seen in the following [link](testing/validation/Markup-validation-service-HTML.PNG).
 
  The [W3C CSS](http://www.css-validator.org/) validation service was used for CSS part. There was no problem regarding CSS validating. 
  Results can be seen in following [link](testing/validation/Markup-validation-service-CSS.PNG).
