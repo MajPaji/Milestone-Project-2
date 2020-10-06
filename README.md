@@ -134,7 +134,7 @@ In the basket section, it is possible to see the shopping list. The shopping ite
 
 ![pic](testing/manual-testing/Figure09.png)
 
-Then users should provide a name and email address to make the order complete. If users do not provide and name or valid email 
+Then users should provide a name and email address to make the order complete. If users do not provide a name or valid email address
 relevant error message appears. A message appears regarding the success or failure in the order procedure. In submitting an order, 
 one email sends to the NASA T-shirt team to put the order and the email of the buyer is provided for future contact. Also, another email 
 sends it to the user to confirm the ordering **(Figure 10 and Figure 11)**. 
